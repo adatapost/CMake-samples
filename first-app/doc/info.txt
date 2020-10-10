@@ -1,0 +1,42 @@
+CMake - project build
+=====================
+
+Step-1 Create a project folder. say "c:/first-app"
+Step-2 Create CMakeLists.txt in it.
+=> Content of CMakeLists.txt 
+
+CMakeLists.txt
+--------------
+
+cmake_minimum_required(VERSION 3.10)
+
+# Set the project name
+project(first-app)
+
+# Add the executable
+add_executable(first-app main.c)
+
+Step-2 Create main.c
+main.c
+--------
+#include <stdio.h>
+
+int main()
+{
+ printf("\nWelcome All!");
+ printf("\nThank you Team CMake!");
+ return 0;
+}
+
+Step-3
+-------
+
+Run,
+
+>cmake CMakeLists.txt
+
+>cmake --build .
+
+>Debug\first-app
+
+

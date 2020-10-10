@@ -1,0 +1,28 @@
+Create separate folders for build and source code:
+
+/first-app
+         |
+         |----/dev
+                CMakeLists.txt
+         |
+         |----/src
+                main.c
+
+
+cmake_minimum_required(VERSION 3.10)
+
+# project name
+project(first-app)
+
+# executable and source code
+add_executable(first-app ../src/main.c)
+
+
+ 
+
+OR
+
+/first-app>cmake dev -B dev/build
+/first-app>cmake --build dev/dev
+ 
+

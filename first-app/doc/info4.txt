@@ -1,0 +1,11 @@
+Create main.c and num.c 
+===================================
+
+cmake_minimum_required(VERSION 3.10)
+
+# project name
+project(first-app)
+
+# executable and source code
+add_executable(first-app ../src/main.c ../src/num.c)
+

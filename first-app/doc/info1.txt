@@ -1,0 +1,22 @@
+Create separate "src" folder for main.c
+=======================================
+
+/first-app
+     |
+     |--src/ 
+           main.c
+     |
+     | CMakeLists.txt
+
+/first-app>cmake .
+/first-app>cmake --build .
+
+
+cmake_minimum_required(VERSION 3.10)
+
+# project name
+project(first-app)
+
+# executable and source code
+add_executable(first-app src/main.c)
+

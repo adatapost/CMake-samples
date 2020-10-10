@@ -1,0 +1,41 @@
+Create a separate build 
+=========================
+
+\---first-app
+    +---dev
+    |       CMakeLists.txt
+    |
+    +---doc
+    |       info.txt
+    |       info1.txt
+    |       info2.txt
+    |       info3.txt
+    |       info4.txt
+    |       info5.txt
+    |       info6.txt
+    |
+    \---src
+            main.c
+            num.c
+            num.h
+
+first-app>cmake dev -B build
+first-app>cmake --build build
+
+
+CMakeLists.txt
+----------------
+
+cmake_minimum_required(VERSION 3.10)
+
+# project name
+project(first-app)
+
+# add library
+add_library(num ../src/num.c)
+
+# executable and source code
+add_executable(first-app ../src/main.c)
+
+# link the library
+target_link_libraries(first-app PUBLIC num)
